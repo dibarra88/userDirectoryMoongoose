@@ -35,7 +35,6 @@ robotSchema.statics.updateUser = function(userName, updateData, callback){
 }
 robotSchema.statics.deleteUser = function(userName, callback){
     var query = {username: userName};
-    console.log("trying to remove this---", userName)
     return this.findOneAndRemove(query);
 }
 robotSchema.query.country = function (country, callback) {

@@ -12,7 +12,6 @@ router.get('/', function (req, res, next) {
             data.skill0 = data.skills[0];
             data.skill1 = data.skills[1];
             data.skill2 = data.skills[2];
-            // console.log(data)
             data.type = "Edit User: " + req.query.username;
             res.render("editUser", data)
         })
@@ -52,7 +51,6 @@ router.get('/addUser', function(req,res,next){
     res.render('editUser',{type:"Add User"})
 })
 router.get('/delete', function(req, res, next){
-    console.log("deleting: ", req.query.username)
     RobotModel.deleteUser(req.query.username)
     .then(function(){
         console.log("User deleted");
