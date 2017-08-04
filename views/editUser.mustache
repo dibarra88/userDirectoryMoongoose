@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/editUser.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>{{type}}</h2>
+        <form action='/edit' method="post" class="editUser">
+            <label for="username">Username:</label>
+            <input type='text' value="{{username}}" name="username" required maxlength="50"/><br />
+            <label for="name">Name: </label>
+            <input type='text'value="{{name}}" name="name" required maxlength="50"/><br />
+            <label for='avatar'>Avatar Link:</label>
+            <input type='url' value="{{avatar}}" name="avatar" required maxlength="140"/><br />
+            <label for='email'>Email:</label>
+            <input type='email' value="{{email}}" name="email" required/><br />
+            <label for='university'>University:</label>
+            <input type='text' value="{{university}}" name="university" required /><br />
+            <label for='job'>Job:</label>
+            <input type='text' value="{{job}}" name="job" /><br />
+            <label for='company'>Company:</label>
+            <input type='text' value="{{company}}" name="company" /><br />
+            <label for='skills'>Skills:</label>
+            <input type='text' value="{{skill0}}" name="skill0" required/><br />
+            <label for='skills'></label>
+            <input type='text' value="{{skill1}}" name="skill1" required/><br />
+            <label for='skills'></label>
+            <input type='text' value="{{skill2}}" name="skill2" required/><br />
+            <label for='phone'>Phone:</label>
+            <input type='tel' value="{{phone}}" name="phone" required/><br />
+            <label for='street_num'>Street Number:</label>
+            <input type='text' value="{{address.street_num}}" name="street_num" required/><br />
+            <label for='street_name'>Street Name:</label>
+            <input type='text' value="{{address.street_name}}" name="street_name" required></input><br />
+            <label for='city'>City:</label>
+            <input type='text' value="{{address.city}}" name="city" required/><br />
+            <label for='state'>State or Providence:</label>
+            <input type='text' value="{{address.state_or_province}}" name="state_or_province"></input><br />
+            <label for='country'>Country:</label>
+            <input type='text' value="{{address.country}}" name="country" required/><br />
+            <div class="submit">
+            <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

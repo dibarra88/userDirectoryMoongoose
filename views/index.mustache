@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+    <h1 id="header">User Directory</h1>
+    {{#country}}
+    <h2>{{.}}</h2>
+    {{/country}} {{#skill}}
+    <h2>{{.}}</h2>
+    {{/skill}}
+    <nav>
+        <div> <a href="/edit/addUser">Add User</a></div>
+        <div> <a href="/employed">Employed  </a></div>
+        <div> <a href="/unemployed">  Unemployed</a></div>
+    </nav>
+    <ul id="users">
+        {{#users}}
+        <li>
+            <div>
+                <a href="/user/{{username}}">
+            <img src="{{avatar}}" />
+            <span class="name">{{name}} </span>
+            {{#company}}
+                <span class="position">{{job}} {{.}}</span>
+            {{/company}}
+            {{^company}}
+                <span class="forHire" style="color:red">Available for hire</span>
+            {{/company}}
+            </a>
+            <form action='/edit' method="get" class="editUser">
+                <input type="hidden" name="username" value="{{username}}" />
+                <button type="submit">Edit</button>
+                <button type="submit" formaction="/edit/delete">Delete</button>
+            </form>
+            </div>
+        </li>
+        {{/users}}
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+ html {box-sizing:border-box;}
+*, *:before, *:after {box-sizing:inherit;}
+
+body {
+  margin:0;
+  padding:0;
+  font-family: "Helvetica Nueue", "Helvatica";
+}
+
+#header{
+    color:black;
+    text-align: center;
+} 
+.container{
+    width: 600px;
+    margin: 0 auto;
+    /* text-align: center; */
+    /* border: 1px solid; */
+    font-size: 20px;
+    line-height: 2;
+}
+h2{
+    text-align: center;
+    color: blue;
+}
+.editUser{
+display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.editUser label{
+    width: 30%;
+}
+.editUser input{
+    width: 70%;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    height: 50px;
+}
+.submit{
+    width: 100%;
+    text-align: center;
+}
+.submit button{
+    font-size: 1.5em;
+    border-radius: 5px;
+}
